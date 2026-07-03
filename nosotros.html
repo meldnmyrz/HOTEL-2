@@ -13,7 +13,7 @@
 <body>
 
 <header id="header">
-  <div class="hdr-inner">
+  <div class="hdr">
     <a href="index.html" class="brand">
       <span class="brand-h">ALCÁZAR DE LUNA</span>
       <span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span>
@@ -25,10 +25,8 @@
       <a href="restaurante.html" class="nl">Restaurante</a>
       <a href="contacto.html"    class="nl">Contacto</a>
     </nav>
-    <div class="hdr-right">
-      <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
-      <a href="contacto.html" class="btn-gold-sm">Reservar</a>
-    </div>
+    <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
+    <a href="contacto.html" class="btn-hdr">Reservar</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
   <div class="mob-nav" id="mobNav">
@@ -37,51 +35,47 @@
     <a href="atracciones.html" class="ml">Atracciones</a>
     <a href="restaurante.html" class="ml">Restaurante</a>
     <a href="contacto.html"    class="ml">Contacto</a>
-    <a href="contacto.html"    class="btn-gold-sm mob-cta">Reservar Ahora</a>
+    <div class="mob-cta"><a href="contacto.html" class="btn-gold" style="display:block;text-align:center;margin-top:4px;">Reservar Ahora</a></div>
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="ph-inner">
+  <div class="ph-body">
     <p class="eyebrow">QUIÉNES SOMOS</p>
     <h1>Nuestra <em>Historia</em></h1>
-    <p class="ph-sub">Más de dos décadas creando experiencias irrepetibles en Guerrero</p>
+    <p class="ph-sub">Más de 17 años creando experiencias irrepetibles en Guerrero</p>
   </div>
 </section>
 
-<!-- NOSOTROS PRINCIPAL -->
-<section class="nosotros" style="padding-top:90px;">
-  <div class="nos-wrap">
-    <div class="nos-media">
-      <img class="nos-main" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=700&q=85&fit=crop" alt="Alberca Alcázar de Luna"/>
-      <img class="nos-sm"   src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=85&fit=crop" alt="Habitación"/>
-      <div class="nos-stat">
-        <span class="nst-n">80<sup>+</sup></span>
-        <span class="nst-l">Personal de Élite</span>
+<section class="nosotros-page">
+  <div class="nos-grid">
+    <div class="nos-imgs">
+      <img class="nos-main-img" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=700&q=85&fit=crop" alt="Alcázar de Luna"/>
+      <img class="nos-sm-img"   src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=85&fit=crop" alt="Habitación"/>
+      <div class="nos-stat-badge">
+        <span class="nsb-n">80+</span>
+        <span class="nsb-l">Personal élite</span>
       </div>
     </div>
     <div class="nos-text">
       <p class="eyebrow">NUESTRA ESENCIA</p>
       <h2>Tu Comodidad,<br/>Nuestra <em>Prioridad</em></h2>
-      <div class="g-rule"></div>
-      <p>En el Hotel Alcázar de Luna concebimos cada estancia como una experiencia irrepetible. Desde nuestras habitaciones diseñadas con materiales premium hasta el servicio personalizado de nuestro equipo, todo está pensado para que su descanso sea absoluto.</p>
-      <p style="margin-top:14px;">Ubicados en la Carretera Cuernavaca-Chilpancingo, somos el punto de encuentro entre la modernidad y la calidez guerrerense, creando memorias que perduran más allá de cada visita.</p>
+      <p>En el Hotel Alcázar de Luna concebimos cada estancia como una experiencia irrepetible. Desde habitaciones diseñadas con materiales premium hasta el servicio personalizado de nuestro equipo, todo está pensado para que su descanso sea absoluto.</p>
+      <p style="margin-top:12px">Ubicados en la Carretera Cuernavaca-Chilpancingo, somos el punto de encuentro entre la modernidad y la calidez guerrerense.</p>
       <div class="nos-nums">
         <div class="nn"><span class="nn-n">17+</span><span class="nn-l">Años operando</span></div>
-        <div class="nn"><span class="nn-n">5★</span><span class="nn-l">Servicio premium</span></div>
+        <div class="nn"><span class="nn-n">5★</span><span class="nn-l">Servicio</span></div>
         <div class="nn"><span class="nn-n">98%</span><span class="nn-l">Satisfacción</span></div>
       </div>
-      <a href="contacto.html" class="btn-primary">Reservar Ahora</a>
+      <a href="contacto.html" class="btn-gold">Reservar Ahora <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<!-- VALORES -->
 <section class="valores">
-  <div class="val-wrap">
-    <p class="eyebrow text-c">POR QUÉ ELEGIRNOS</p>
-    <h2 class="text-c">Lo Que Nos <em>Distingue</em></h2>
+  <div class="val-inner">
+    <p class="eyebrow">POR QUÉ ELEGIRNOS</p>
+    <h2>Lo Que Nos <em>Distingue</em></h2>
     <div class="val-grid">
       <div class="val-card">
         <div class="val-ic"><i class="fa-solid fa-star"></i></div>
@@ -96,7 +90,7 @@
       <div class="val-card">
         <div class="val-ic"><i class="fa-solid fa-shield-halved"></i></div>
         <h3>Seguridad y Confort</h3>
-        <p>Instalaciones de primer nivel con estacionamiento vigilado, elevador de autos y áreas comunes de lujo.</p>
+        <p>Estacionamiento vigilado, elevador de autos y áreas comunes de lujo para su tranquilidad total.</p>
       </div>
       <div class="val-card">
         <div class="val-ic"><i class="fa-solid fa-utensils"></i></div>
@@ -107,77 +101,45 @@
   </div>
 </section>
 
-<!-- AWARDS -->
-<section class="awards">
-  <p class="eyebrow text-c">RECONOCIMIENTOS</p>
-  <h2 class="text-c">Solo Lo Mejor Para Ti</h2>
-  <div class="aw-row">
-    <div class="aw"><div class="aw-c"><span>2024</span></div><p>Mejor Hotel Boutique</p></div>
-    <div class="aw"><div class="aw-c"><span>2023</span></div><p>Mejor Servicio al Cliente</p></div>
-    <div class="aw"><div class="aw-c"><span>2022</span></div><p>Mejor Restaurante</p></div>
+<section class="awards-sec">
+  <div class="awards-inner">
+    <p class="eyebrow">RECONOCIMIENTOS</p>
+    <h2>Solo Lo Mejor <em>Para Ti</em></h2>
+    <div class="aw-row">
+      <div class="aw"><div class="aw-circle"><span>2024</span></div><p>Mejor Hotel Boutique</p></div>
+      <div class="aw"><div class="aw-circle"><span>2023</span></div><p>Mejor Servicio al Cliente</p></div>
+      <div class="aw"><div class="aw-circle"><span>2022</span></div><p>Mejor Restaurante</p></div>
+    </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="nl-wrap">
-    <div>
-      <p class="brand-h">ALCÁZAR DE LUNA</p>
-      <p class="nl-txt">Reciba ofertas exclusivas directamente en su correo.</p>
-    </div>
-    <form class="nl-form" id="nlForm">
-      <input type="email" placeholder="INGRESE SU CORREO ELECTRÓNICO" required/>
-      <button type="submit">SUSCRIBIRSE</button>
-    </form>
+<section class="nl-sec">
+  <div class="nl-inner">
+    <div class="nl-copy"><h3>Ofertas <em>Exclusivas</em></h3><p>Reciba promociones y novedades directamente en su correo.</p></div>
+    <form class="nl-form" id="nlForm"><input type="email" placeholder="Su correo electrónico" required/><button type="submit">Suscribirse</button></form>
   </div>
 </section>
 
 <footer>
-  <div class="ft-wrap">
+  <div class="ft-inner">
     <div class="ft-grid">
-      <div class="ft-brand">
+      <div>
         <p class="brand-h">ALCÁZAR DE LUNA</p>
-        <p class="brand-s" style="margin:4px 0 14px;color:rgba(255,255,255,.35);">HOTEL BOUTIQUE · CHILPANCINGO</p>
-        <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p>
+        <p class="brand-s" style="margin-top:4px;">HOTEL BOUTIQUE · CHILPANCINGO</p>
+        <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto en el corazón de Guerrero.</p>
         <div class="ft-social">
           <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="atracciones.html">Atracciones</a>
-        <a href="restaurante.html">Restaurante</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="ft-col">
-        <h4>Habitaciones</h4>
-        <a href="contacto.html">Estándar con Balcón</a>
-        <a href="contacto.html">Estándar King</a>
-        <a href="contacto.html">Suite Premium</a>
-        <a href="contacto.html">Suite Luna</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contáctenos</h4>
-        <a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a>
-        <a href="mailto:gerencia@hotelalcazardeluna.com" style="word-break:break-all;"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a>
-        <a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
-      </div>
+      <div class="ft-col"><h4>Páginas</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="atracciones.html">Atracciones</a><a href="restaurante.html">Restaurante</a><a href="contacto.html">Contacto</a></div>
+      <div class="ft-col"><h4>Habitaciones</h4><a href="contacto.html">Estándar con Balcón</a><a href="contacto.html">Estándar King</a><a href="contacto.html">Suite Premium</a><a href="contacto.html">Suite Luna</a></div>
+      <div class="ft-col"><h4>Contáctenos</h4><a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a><a href="mailto:gerencia@hotelalcazardeluna.com"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a><a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
     </div>
-    <div class="ft-bottom">
-      <span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span>
-      <div class="ft-soc2">
-        <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-    </div>
+    <div class="ft-bottom"><span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span><div class="ft-soc2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
   </div>
 </footer>
-
 <script src="index.js"></script>
 </body>
 </html>

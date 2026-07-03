@@ -14,11 +14,8 @@
 <body>
 
 <header id="header">
-  <div class="hdr-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-h">ALCÁZAR DE LUNA</span>
-      <span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span>
-    </a>
+  <div class="hdr">
+    <a href="index.html" class="brand"><span class="brand-h">ALCÁZAR DE LUNA</span><span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span></a>
     <nav class="nav-links">
       <a href="index.html"       class="nl">Inicio</a>
       <a href="nosotros.html"    class="nl">Nosotros</a>
@@ -26,45 +23,35 @@
       <a href="restaurante.html" class="nl">Restaurante</a>
       <a href="contacto.html"    class="nl active">Contacto</a>
     </nav>
-    <div class="hdr-right">
-      <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
-      <a href="#reservar" class="btn-gold-sm">Reservar</a>
-    </div>
+    <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
+    <a href="#reservar" class="btn-hdr">Reservar</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
   <div class="mob-nav" id="mobNav">
-    <a href="index.html"       class="ml">Inicio</a>
-    <a href="nosotros.html"    class="ml">Nosotros</a>
-    <a href="atracciones.html" class="ml">Atracciones</a>
-    <a href="restaurante.html" class="ml">Restaurante</a>
-    <a href="contacto.html"    class="ml">Contacto</a>
-    <a href="#reservar"        class="btn-gold-sm mob-cta">Reservar Ahora</a>
+    <a href="index.html" class="ml">Inicio</a><a href="nosotros.html" class="ml">Nosotros</a>
+    <a href="atracciones.html" class="ml">Atracciones</a><a href="restaurante.html" class="ml">Restaurante</a>
+    <a href="contacto.html" class="ml">Contacto</a>
+    <div class="mob-cta"><a href="#reservar" class="btn-gold" style="display:block;text-align:center;margin-top:4px;">Reservar Ahora</a></div>
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="ph-inner">
+  <div class="ph-body">
     <p class="eyebrow">ESTAMOS AQUÍ PARA TI</p>
     <h1>Contacto y <em>Reservas</em></h1>
-    <p class="ph-sub">Escríbenos, llámanos o visítanos — estamos listos para recibirte</p>
+    <p class="ph-sub">Escríbenos, llámanos o visítanos — listos para recibirte</p>
   </div>
 </section>
 
-<!-- CONTACTO + MAPA -->
-<section class="contacto" id="reservar" style="padding-top:90px;">
+<section class="cto-sec" id="reservar" style="padding-top:80px">
   <div class="cto-wrap">
     <div class="cto-left">
-      <p class="eyebrow">UBÍCANOS</p>
-      <h2>Encuéntranos<br/><em>Aquí</em></h2>
-      <div class="g-rule"></div>
+      <p class="eyebrow">INFORMACIÓN</p>
+      <h2>Encuéntranos <em>Aquí</em></h2>
       <div class="cto-items">
         <div class="cti">
           <div class="cti-ic"><i class="fa-solid fa-location-dot"></i></div>
-          <div>
-            <h4>Dirección</h4>
-            <p>Carr. Cuernavaca-Chilpancingo km 220+681.80,<br/>Col. Ixquiapa, Chilpancingo, Gro., 39016</p>
-          </div>
+          <div><h4>Dirección</h4><p>Carr. Cuernavaca-Chilpancingo km 220+681.80,<br/>Col. Ixquiapa, Chilpancingo, Gro., 39016</p></div>
         </div>
         <div class="cti">
           <div class="cti-ic"><i class="fa-solid fa-phone"></i></div>
@@ -80,103 +67,77 @@
         </div>
       </div>
 
-      <!-- BOOKING WIDGET -->
-      <p class="eyebrow" style="margin-top:8px;">RESERVA DIRECTA</p>
-      <form class="bw" id="bwForm" style="margin-top:12px;">
-        <div class="bw-f">
-          <label><i class="fa-regular fa-calendar icon-g"></i> CHECK IN</label>
-          <input type="date" id="bwCI"/>
-        </div>
-        <div class="bw-div"></div>
-        <div class="bw-f">
-          <label><i class="fa-regular fa-calendar icon-g"></i> CHECK OUT</label>
-          <input type="date" id="bwCO"/>
-        </div>
-        <div class="bw-div"></div>
-        <div class="bw-f bw-sm">
-          <label><i class="fa-solid fa-user icon-g"></i> HUÉSPEDES</label>
-          <select id="bwGuests">
-            <option>01</option><option selected>02</option>
-            <option>03</option><option>04</option>
-          </select>
-        </div>
-        <button type="submit" class="bw-btn">Consultar</button>
-      </form>
+      <!-- Booking card -->
+      <div class="bw-card">
+        <p class="bw-card-title">Reserva Directa — Mejor Precio</p>
+        <form id="bwForm">
+          <div class="bw-fields">
+            <div class="bwf">
+              <label><i class="fa-regular fa-calendar"></i> Check In</label>
+              <input type="date" id="bwCI"/>
+            </div>
+            <div class="bwf">
+              <label><i class="fa-regular fa-calendar"></i> Check Out</label>
+              <input type="date" id="bwCO"/>
+            </div>
+            <div class="bwf">
+              <label><i class="fa-solid fa-user-group"></i> Huéspedes</label>
+              <select id="bwGuests">
+                <option value="1">1 persona</option>
+                <option value="2" selected>2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+              </select>
+            </div>
+            <div class="bwf">
+              <label><i class="fa-solid fa-bed"></i> Habitación</label>
+              <select>
+                <option>Estándar King</option>
+                <option>Estándar Balcón</option>
+                <option>Suite Premium</option>
+                <option>Suite Luna</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn-gold" style="width:100%;justify-content:center">
+            <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+          </button>
+        </form>
+      </div>
     </div>
 
-    <div class="cto-map" style="display:flex;flex-direction:column;gap:20px;">
+    <div class="cto-right">
       <div id="map"></div>
+      <p class="cto-form-title" style="margin-top:20px">Envíanos un Mensaje</p>
       <form class="cto-form" id="ctoForm">
-        <p class="eyebrow">ENVÍANOS UN MENSAJE</p>
-        <div class="cf-2">
-          <input type="text"  id="cfName"  placeholder="Nombre completo" required/>
-          <input type="email" id="cfEmail" placeholder="Correo electrónico" required/>
+        <div class="cf2">
+          <input type="text"  id="cfName"    placeholder="Nombre completo" required/>
+          <input type="email" id="cfEmail"   placeholder="Correo electrónico" required/>
         </div>
         <input type="text" id="cfSubject" placeholder="Asunto"/>
         <textarea rows="4" id="cfMsg" placeholder="Mensaje..."></textarea>
-        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+        <button type="submit" class="btn-gold" style="justify-content:center">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="nl-wrap">
-    <div>
-      <p class="brand-h">ALCÁZAR DE LUNA</p>
-      <p class="nl-txt">Reciba ofertas exclusivas directamente en su correo.</p>
-    </div>
-    <form class="nl-form" id="nlForm">
-      <input type="email" placeholder="INGRESE SU CORREO ELECTRÓNICO" required/>
-      <button type="submit">SUSCRIBIRSE</button>
-    </form>
+<section class="nl-sec">
+  <div class="nl-inner">
+    <div class="nl-copy"><h3>Ofertas <em>Exclusivas</em></h3><p>Reciba promociones y novedades directamente en su correo.</p></div>
+    <form class="nl-form" id="nlForm"><input type="email" placeholder="Su correo electrónico" required/><button type="submit">Suscribirse</button></form>
   </div>
 </section>
 
 <footer>
-  <div class="ft-wrap">
+  <div class="ft-inner">
     <div class="ft-grid">
-      <div class="ft-brand">
-        <p class="brand-h">ALCÁZAR DE LUNA</p>
-        <p class="brand-s" style="margin:4px 0 14px;color:rgba(255,255,255,.35);">HOTEL BOUTIQUE · CHILPANCINGO</p>
-        <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p>
-        <div class="ft-social">
-          <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="atracciones.html">Atracciones</a>
-        <a href="restaurante.html">Restaurante</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="ft-col">
-        <h4>Habitaciones</h4>
-        <a href="contacto.html">Estándar con Balcón</a>
-        <a href="contacto.html">Estándar King</a>
-        <a href="contacto.html">Suite Premium</a>
-        <a href="contacto.html">Suite Luna</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contáctenos</h4>
-        <a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a>
-        <a href="mailto:gerencia@hotelalcazardeluna.com" style="word-break:break-all;"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a>
-        <a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
-      </div>
+      <div><p class="brand-h">ALCÁZAR DE LUNA</p><p class="brand-s" style="margin-top:4px;">HOTEL BOUTIQUE · CHILPANCINGO</p><p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p><div class="ft-social"><a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+      <div class="ft-col"><h4>Páginas</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="atracciones.html">Atracciones</a><a href="restaurante.html">Restaurante</a><a href="contacto.html">Contacto</a></div>
+      <div class="ft-col"><h4>Habitaciones</h4><a href="contacto.html">Estándar con Balcón</a><a href="contacto.html">Estándar King</a><a href="contacto.html">Suite Premium</a><a href="contacto.html">Suite Luna</a></div>
+      <div class="ft-col"><h4>Contáctenos</h4><a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a><a href="mailto:gerencia@hotelalcazardeluna.com"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a><a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
     </div>
-    <div class="ft-bottom">
-      <span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span>
-      <div class="ft-soc2">
-        <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-    </div>
+    <div class="ft-bottom"><span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span><div class="ft-soc2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
   </div>
 </footer>
 

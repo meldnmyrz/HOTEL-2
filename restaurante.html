@@ -13,11 +13,8 @@
 <body>
 
 <header id="header">
-  <div class="hdr-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-h">ALCÁZAR DE LUNA</span>
-      <span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span>
-    </a>
+  <div class="hdr">
+    <a href="index.html" class="brand"><span class="brand-h">ALCÁZAR DE LUNA</span><span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span></a>
     <nav class="nav-links">
       <a href="index.html"       class="nl">Inicio</a>
       <a href="nosotros.html"    class="nl">Nosotros</a>
@@ -25,183 +22,120 @@
       <a href="restaurante.html" class="nl active">Restaurante</a>
       <a href="contacto.html"    class="nl">Contacto</a>
     </nav>
-    <div class="hdr-right">
-      <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
-      <a href="contacto.html" class="btn-gold-sm">Reservar</a>
-    </div>
+    <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
+    <a href="contacto.html" class="btn-hdr">Reservar</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
   <div class="mob-nav" id="mobNav">
-    <a href="index.html"       class="ml">Inicio</a>
-    <a href="nosotros.html"    class="ml">Nosotros</a>
-    <a href="atracciones.html" class="ml">Atracciones</a>
-    <a href="restaurante.html" class="ml">Restaurante</a>
-    <a href="contacto.html"    class="ml">Contacto</a>
-    <a href="contacto.html"    class="btn-gold-sm mob-cta">Reservar Ahora</a>
+    <a href="index.html" class="ml">Inicio</a><a href="nosotros.html" class="ml">Nosotros</a>
+    <a href="atracciones.html" class="ml">Atracciones</a><a href="restaurante.html" class="ml">Restaurante</a>
+    <a href="contacto.html" class="ml">Contacto</a>
+    <div class="mob-cta"><a href="contacto.html" class="btn-gold" style="display:block;text-align:center;margin-top:4px;">Reservar Ahora</a></div>
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="ph-inner">
+  <div class="ph-body">
     <p class="eyebrow">EXPERIENCIA GASTRONÓMICA</p>
     <h1>Restaurante <em>Naolí</em></h1>
     <p class="ph-sub">Los sabores del Pacífico mexicano elevados al arte culinario</p>
   </div>
 </section>
 
-<!-- RESTAURANTE PRINCIPAL -->
-<section class="restaurante" style="padding-top:90px;">
+<section class="rst-sec" style="padding-top:80px">
   <div class="rst-wrap">
-    <div class="rst-media">
-      <img class="rst-main" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=90&fit=crop" alt="Platillo Naolí"/>
+    <div class="rst-imgs">
+      <img class="rst-main" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=90&fit=crop" alt="Naolí"/>
       <div class="rst-row">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85&fit=crop" alt="Interior Naolí"/>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85&fit=crop" alt="Interior"/>
         <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&q=85&fit=crop" alt="Cócteles"/>
       </div>
     </div>
     <div class="rst-text">
       <p class="eyebrow">COCINA DE AUTOR</p>
-      <h2>Restaurante<br/><em>Naolí</em></h2>
-      <div class="g-rule"></div>
-      <p>En el corazón del Alcázar de Luna, <strong>Restaurante Naolí</strong> es donde los sabores del Pacífico mexicano se transforman en arte culinario. Frutos del mar frescos, recetas ancestrales de Guerrero y una cava seleccionada crean una sinfonía incomparable.</p>
-      <p style="margin-top:14px;">Abrimos todos los días de <strong>7:00 a 22:00 horas</strong>, ofreciendo desayunos, comidas y cenas con el mismo nivel de excelencia.</p>
-      <div class="rst-features">
-        <div class="rsf"><i class="fa-solid fa-fish icon-g"></i><span>Mariscos del Pacífico</span></div>
-        <div class="rsf"><i class="fa-solid fa-wine-glass icon-g"></i><span>Cava Seleccionada</span></div>
-        <div class="rsf"><i class="fa-solid fa-fire-burner icon-g"></i><span>Cocina de Autor</span></div>
-        <div class="rsf"><i class="fa-solid fa-clock icon-g"></i><span>7:00 – 22:00 hrs</span></div>
-        <div class="rsf"><i class="fa-solid fa-leaf icon-g"></i><span>Ingredientes Locales</span></div>
-        <div class="rsf"><i class="fa-solid fa-users icon-g"></i><span>Grupos y Eventos</span></div>
+      <h2>Restaurante <em>Naolí</em></h2>
+      <p>En el corazón del Alcázar de Luna, Restaurante Naolí es donde los sabores del Pacífico mexicano se transforman en arte culinario. Frutos del mar frescos, recetas ancestrales de Guerrero y una cava seleccionada.</p>
+      <p style="margin-top:10px">Abrimos todos los días de <strong>7:00 a 22:00 horas</strong>.</p>
+      <div class="rst-feats">
+        <div class="rsf"><i class="fa-solid fa-fish"></i> Mariscos del Pacífico</div>
+        <div class="rsf"><i class="fa-solid fa-wine-glass"></i> Cava Seleccionada</div>
+        <div class="rsf"><i class="fa-solid fa-fire-burner"></i> Cocina de Autor</div>
+        <div class="rsf"><i class="fa-solid fa-clock"></i> 7:00 – 22:00 hrs</div>
+        <div class="rsf"><i class="fa-solid fa-leaf"></i> Ingredientes Locales</div>
+        <div class="rsf"><i class="fa-solid fa-users"></i> Grupos y Eventos</div>
       </div>
-      <div class="menu-prev">
-        <div class="mpi">
-          <div><b>Ceviche Guerrerense</b><span>Camarón, limón, chile, cilantro</span></div>
-          <b class="mpp">$185</b>
-        </div>
-        <div class="mpi">
-          <div><b>Filete al Mole Negro</b><span>Receta tradicional, arroz y frijoles</span></div>
-          <b class="mpp">$295</b>
-        </div>
-        <div class="mpi">
-          <div><b>Pozole Rojo de la Casa</b><span>Maíz cacahuazintle, chile ancestral</span></div>
-          <b class="mpp">$165</b>
-        </div>
-        <div class="mpi">
-          <div><b>Camarones al Ajillo</b><span>Mantequilla, ajo, vino blanco</span></div>
-          <b class="mpp">$245</b>
-        </div>
-        <div class="mpi">
-          <div><b>Chilpachole de Jaiba</b><span>Jaiba fresca, epazote, chile ancho</span></div>
-          <b class="mpp">$195</b>
-        </div>
+      <div class="menu-list">
+        <div class="mi"><div><p class="mi-name">Ceviche Guerrerense</p><p class="mi-desc">Camarón, limón, chile, cilantro</p></div><span class="mi-price">$185</span></div>
+        <div class="mi"><div><p class="mi-name">Filete al Mole Negro</p><p class="mi-desc">Receta tradicional, arroz y frijoles</p></div><span class="mi-price">$295</span></div>
+        <div class="mi"><div><p class="mi-name">Pozole Rojo de la Casa</p><p class="mi-desc">Maíz cacahuazintle, chile ancestral</p></div><span class="mi-price">$165</span></div>
+        <div class="mi"><div><p class="mi-name">Camarones al Ajillo</p><p class="mi-desc">Mantequilla, ajo, vino blanco</p></div><span class="mi-price">$245</span></div>
+        <div class="mi"><div><p class="mi-name">Chilpachole de Jaiba</p><p class="mi-desc">Jaiba fresca, epazote, chile ancho</p></div><span class="mi-price">$195</span></div>
       </div>
-      <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn-primary">Ver Menú Completo</a>
+      <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank" class="btn-gold">Ver Menú Completo <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<!-- AMBIENTE GALLERY -->
-<section class="rooms-gal" style="padding-bottom:0;">
-  <div class="rg-head">
-    <h2>Nuestro <em style="font-style:italic;color:var(--gold);">Ambiente</em></h2>
-  </div>
-  <div class="rg-grid" style="grid-template-rows:280px;">
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=700&q=85&fit=crop" alt="Terraza"/><div class="rgi-ov"><p>Terraza al Aire Libre</p></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?w=700&q=85&fit=crop" alt="Barra"/><div class="rgi-ov"><p>Barra de Cócteles</p></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?w=700&q=85&fit=crop" alt="Salón"/><div class="rgi-ov"><p>Salón Principal</p></div></div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <p class="eyebrow text-c">OPINIONES</p>
-  <h2 class="text-c">Lo Que Dicen Nuestros <em>Comensales</em></h2>
-  <div class="tst-grid">
-    <div class="tst-card">
-      <div class="tst-q">"</div>
-      <img src="https://i.pravatar.cc/80?img=47" alt="Joseline A." class="tst-av"/>
-      <h4>Joseline Alejandro</h4><p class="tst-loc">Ciudad de México</p>
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">La cena de aniversario en Naolí fue perfecta. El ceviche guerrerense y el mole negro son simplemente espectaculares. ¡Volveremos solo por la comida!</p>
+<!-- Banner galería -->
+<section class="banner-sec">
+  <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=85&fit=crop" alt="Ambiente Naolí" class="banner-bg" style="filter:brightness(.45)"/>
+  <div class="banner-over">
+    <div class="banner-left">
+      <p class="eyebrow">AMBIENTE</p>
+      <h2>Un Espacio para <em style="font-style:normal;color:var(--gold)">Cada Ocasión</em></h2>
+      <p>Celebraciones, cenas románticas, eventos corporativos o simplemente disfrutar de la mejor gastronomía guerrerense.</p>
+      <a href="contacto.html" class="btn-gold" style="margin-top:24px;display:inline-flex">Hacer una Reserva <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <div class="tst-card">
-      <div class="tst-q">"</div>
-      <img src="https://i.pravatar.cc/80?img=32" alt="Clara D." class="tst-av"/>
-      <h4>Clara David</h4><p class="tst-loc">Acapulco, Guerrero</p>
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">El desayuno buffet es increíble, con frutas frescas y antojitos guerrerenses que no puedes encontrar en otro lado.</p>
-    </div>
-    <div class="tst-card">
-      <div class="tst-q">"</div>
-      <img src="https://i.pravatar.cc/80?img=15" alt="Edward J." class="tst-av"/>
-      <h4>Edward James</h4><p class="tst-loc">Puebla, México</p>
-      <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">El Restaurante Naolí cerró mi semana de trabajo con el mejor mole que he probado en mi vida. El servicio es impecable.</p>
+    <div class="banner-opts">
+      <a href="contacto.html" class="b-opt">Cena romántica <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contacto.html" class="b-opt">Evento corporativo <i class="fa-solid fa-arrow-right"></i></a>
+      <a href="contacto.html" class="b-opt">Celebración especial <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="nl-wrap">
-    <div>
-      <p class="brand-h">ALCÁZAR DE LUNA</p>
-      <p class="nl-txt">Reciba ofertas exclusivas directamente en su correo.</p>
+<section class="tst-sec">
+  <div class="tst-inner">
+    <p class="eyebrow">OPINIONES</p>
+    <h2>Lo Que Dicen<br/>Nuestros <em>Comensales</em></h2>
+    <div class="tst-grid">
+      <div class="tst-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="tst-txt">"La cena de aniversario en Naolí fue perfecta. El ceviche guerrerense y el mole negro son simplemente espectaculares."</p>
+        <div class="tst-author"><img src="https://i.pravatar.cc/80?img=47" alt="" class="tst-av"/><div><h4>Joseline Alejandro</h4><p class="tst-loc">Ciudad de México</p></div></div>
+      </div>
+      <div class="tst-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="tst-txt">"El desayuno buffet es increíble, con frutas frescas y antojitos guerrerenses que no puedes encontrar en otro lado."</p>
+        <div class="tst-author"><img src="https://i.pravatar.cc/80?img=32" alt="" class="tst-av"/><div><h4>Clara David</h4><p class="tst-loc">Acapulco, Guerrero</p></div></div>
+      </div>
+      <div class="tst-card">
+        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="tst-txt">"El Restaurante Naolí cerró mi semana de trabajo con el mejor mole que he probado. El servicio es impecable."</p>
+        <div class="tst-author"><img src="https://i.pravatar.cc/80?img=15" alt="" class="tst-av"/><div><h4>Edward James</h4><p class="tst-loc">Puebla, México</p></div></div>
+      </div>
     </div>
-    <form class="nl-form" id="nlForm">
-      <input type="email" placeholder="INGRESE SU CORREO ELECTRÓNICO" required/>
-      <button type="submit">SUSCRIBIRSE</button>
-    </form>
+  </div>
+</section>
+
+<section class="nl-sec">
+  <div class="nl-inner">
+    <div class="nl-copy"><h3>Ofertas <em>Exclusivas</em></h3><p>Reciba promociones y novedades directamente en su correo.</p></div>
+    <form class="nl-form" id="nlForm"><input type="email" placeholder="Su correo electrónico" required/><button type="submit">Suscribirse</button></form>
   </div>
 </section>
 
 <footer>
-  <div class="ft-wrap">
+  <div class="ft-inner">
     <div class="ft-grid">
-      <div class="ft-brand">
-        <p class="brand-h">ALCÁZAR DE LUNA</p>
-        <p class="brand-s" style="margin:4px 0 14px;color:rgba(255,255,255,.35);">HOTEL BOUTIQUE · CHILPANCINGO</p>
-        <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p>
-        <div class="ft-social">
-          <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="atracciones.html">Atracciones</a>
-        <a href="restaurante.html">Restaurante</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="ft-col">
-        <h4>Habitaciones</h4>
-        <a href="contacto.html">Estándar con Balcón</a>
-        <a href="contacto.html">Estándar King</a>
-        <a href="contacto.html">Suite Premium</a>
-        <a href="contacto.html">Suite Luna</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contáctenos</h4>
-        <a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a>
-        <a href="mailto:gerencia@hotelalcazardeluna.com" style="word-break:break-all;"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a>
-        <a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
-      </div>
+      <div><p class="brand-h">ALCÁZAR DE LUNA</p><p class="brand-s" style="margin-top:4px;">HOTEL BOUTIQUE · CHILPANCINGO</p><p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p><div class="ft-social"><a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+      <div class="ft-col"><h4>Páginas</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="atracciones.html">Atracciones</a><a href="restaurante.html">Restaurante</a><a href="contacto.html">Contacto</a></div>
+      <div class="ft-col"><h4>Habitaciones</h4><a href="contacto.html">Estándar con Balcón</a><a href="contacto.html">Estándar King</a><a href="contacto.html">Suite Premium</a><a href="contacto.html">Suite Luna</a></div>
+      <div class="ft-col"><h4>Contáctenos</h4><a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a><a href="mailto:gerencia@hotelalcazardeluna.com"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a><a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
     </div>
-    <div class="ft-bottom">
-      <span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span>
-      <div class="ft-soc2">
-        <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-    </div>
+    <div class="ft-bottom"><span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span><div class="ft-soc2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
   </div>
 </footer>
-
 <script src="index.js"></script>
 </body>
 </html>

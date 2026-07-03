@@ -13,11 +13,8 @@
 <body>
 
 <header id="header">
-  <div class="hdr-inner">
-    <a href="index.html" class="brand">
-      <span class="brand-h">ALCÁZAR DE LUNA</span>
-      <span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span>
-    </a>
+  <div class="hdr">
+    <a href="index.html" class="brand"><span class="brand-h">ALCÁZAR DE LUNA</span><span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span></a>
     <nav class="nav-links">
       <a href="index.html"       class="nl">Inicio</a>
       <a href="nosotros.html"    class="nl">Nosotros</a>
@@ -25,179 +22,96 @@
       <a href="restaurante.html" class="nl">Restaurante</a>
       <a href="contacto.html"    class="nl">Contacto</a>
     </nav>
-    <div class="hdr-right">
-      <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
-      <a href="contacto.html" class="btn-gold-sm">Reservar</a>
-    </div>
+    <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
+    <a href="contacto.html" class="btn-hdr">Reservar</a>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
   <div class="mob-nav" id="mobNav">
-    <a href="index.html"       class="ml">Inicio</a>
-    <a href="nosotros.html"    class="ml">Nosotros</a>
-    <a href="atracciones.html" class="ml">Atracciones</a>
-    <a href="restaurante.html" class="ml">Restaurante</a>
-    <a href="contacto.html"    class="ml">Contacto</a>
-    <a href="contacto.html"    class="btn-gold-sm mob-cta">Reservar Ahora</a>
+    <a href="index.html" class="ml">Inicio</a><a href="nosotros.html" class="ml">Nosotros</a>
+    <a href="atracciones.html" class="ml">Atracciones</a><a href="restaurante.html" class="ml">Restaurante</a>
+    <a href="contacto.html" class="ml">Contacto</a>
+    <div class="mob-cta"><a href="contacto.html" class="btn-gold" style="display:block;text-align:center;margin-top:4px;">Reservar Ahora</a></div>
   </div>
 </header>
 
-<!-- PAGE HERO -->
 <section class="page-hero">
-  <div class="ph-inner">
+  <div class="ph-body">
     <p class="eyebrow">EXPLORA GUERRERO</p>
     <h1>Atracciones <em>Cercanas</em></h1>
     <p class="ph-sub">A minutos del hotel, lo mejor de la región está esperándote</p>
   </div>
 </section>
 
-<!-- ATRACCIONES GRID COMPLETO -->
-<section class="atracciones" style="padding-top:90px;">
-  <div class="atr-wrap">
-    <div class="atr-hd">
+<section class="atr-sec" style="padding-top:80px">
+  <div class="atr-inner">
+    <div class="atr-top">
       <div>
-        <p class="eyebrow">EXPLORA CHILPANCINGO</p>
-        <h2>Descubre las<br/><em>Atracciones</em><br/>Cercanas</h2>
+        <p class="eyebrow">NATURALEZA Y CULTURA</p>
+        <h2>Descubre lo Mejor<br/>de <em>Guerrero</em></h2>
       </div>
-      <p class="atr-intro">A minutos del hotel encontrarás lo mejor de Guerrero: cultura, naturaleza, gastronomía y aventura. Nuestro concierge organiza cada experiencia para que no te preocupes por nada.</p>
+      <p>Nuestro concierge organiza cada experiencia para que no te preocupes por nada. Traslados, guías locales y reservas incluidas.</p>
     </div>
     <div class="atr-grid">
       <div class="atr-card atr-big">
         <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=900&q=85&fit=crop" alt="Grutas Cacahuamilpa"/>
-        <div class="atr-info">
-          <span class="atr-tag">Naturaleza</span>
-          <h3>Grutas de Cacahuamilpa</h3>
-          <p>Una de las cavernas más grandes del mundo, a menos de 1 hora del hotel.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Naturaleza</span><h3>Grutas de Cacahuamilpa</h3><p>Una de las cavernas más grandes del mundo, a menos de 1 hora del hotel.</p></div>
       </div>
       <div class="atr-card">
         <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=600&q=85&fit=crop" alt="Centro Histórico"/>
-        <div class="atr-info">
-          <span class="atr-tag">Cultura</span>
-          <h3>Centro Histórico</h3>
-          <p>Arquitectura colonial, mercados artesanales y vida local auténtica.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Cultura</span><h3>Centro Histórico</h3><p>Arquitectura colonial y mercados artesanales.</p></div>
       </div>
       <div class="atr-card">
         <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=85&fit=crop" alt="Gastronomía"/>
-        <div class="atr-info">
-          <span class="atr-tag">Gastronomía</span>
-          <h3>Sabores de Guerrero</h3>
-          <p>Pozole rojo, tlayudas y mole negro. Una experiencia culinaria única.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Gastronomía</span><h3>Sabores de Guerrero</h3><p>Pozole, tlayudas y mole negro auténtico.</p></div>
       </div>
       <div class="atr-card">
         <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&q=85&fit=crop" alt="Sierra"/>
-        <div class="atr-info">
-          <span class="atr-tag">Aventura</span>
-          <h3>Sierra Madre del Sur</h3>
-          <p>Rutas de senderismo con vistas espectaculares y aire puro de montaña.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Aventura</span><h3>Sierra Madre del Sur</h3><p>Senderismo y vistas espectaculares.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SEGUNDA FILA DE ATRACCIONES -->
-<section class="atracciones" style="padding-top:0;padding-bottom:90px;">
-  <div class="atr-wrap">
-    <div class="atr-grid" style="grid-template-columns:1fr 1fr 1fr;grid-template-rows:260px;">
+<section class="atr-sec" style="padding-top:0;background:var(--navy2)">
+  <div class="atr-inner">
+    <div class="atr-grid" style="grid-template-columns:1fr 1fr 1fr;grid-template-rows:240px">
       <div class="atr-card">
         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=85&fit=crop" alt="Balnearios"/>
-        <div class="atr-info">
-          <span class="atr-tag">Recreación</span>
-          <h3>Balnearios Regionales</h3>
-          <p>Aguas termales y naturales a corta distancia del hotel.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Recreación</span><h3>Balnearios Regionales</h3><p>Aguas termales y naturales a corta distancia.</p></div>
       </div>
       <div class="atr-card">
-        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=85&fit=crop" alt="Zonas arqueológicas"/>
-        <div class="atr-info">
-          <span class="atr-tag">Historia</span>
-          <h3>Zonas Arqueológicas</h3>
-          <p>Vestigios de culturas prehispánicas que narran siglos de historia guerrerense.</p>
-        </div>
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=85&fit=crop" alt="Arqueología"/>
+        <div class="atr-overlay"><span class="atr-tag">Historia</span><h3>Zonas Arqueológicas</h3><p>Vestigios prehispánicos de cultura guerrerense.</p></div>
       </div>
       <div class="atr-card">
         <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=600&q=85&fit=crop" alt="Bosques"/>
-        <div class="atr-info">
-          <span class="atr-tag">Ecoturismo</span>
-          <h3>Bosques de Pino-Encino</h3>
-          <p>Ecosistemas únicos ideales para senderismo y fotografía de naturaleza.</p>
-        </div>
+        <div class="atr-overlay"><span class="atr-tag">Ecoturismo</span><h3>Bosques de Pino-Encino</h3><p>Ecosistemas únicos para senderismo y fotografía.</p></div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CTA RESERVAR -->
-<section class="awards" style="background:var(--navy);padding:72px 40px;">
-  <p class="eyebrow text-c" style="color:var(--gold);">¿LISTO PARA EXPLORAR?</p>
-  <h2 class="text-c" style="color:var(--white);margin-bottom:28px;">Reserva y <em>Descubre</em> Guerrero</h2>
-  <div style="text-align:center;">
-    <a href="contacto.html" class="btn-primary">Reservar Mi Estancia</a>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="nl-wrap">
-    <div>
-      <p class="brand-h">ALCÁZAR DE LUNA</p>
-      <p class="nl-txt">Reciba ofertas exclusivas directamente en su correo.</p>
+    <div style="text-align:center;margin-top:40px">
+      <a href="contacto.html" class="btn-gold">Reservar y Explorar <i class="fa-solid fa-arrow-right"></i></a>
     </div>
-    <form class="nl-form" id="nlForm">
-      <input type="email" placeholder="INGRESE SU CORREO ELECTRÓNICO" required/>
-      <button type="submit">SUSCRIBIRSE</button>
-    </form>
+  </div>
+</section>
+
+<section class="nl-sec">
+  <div class="nl-inner">
+    <div class="nl-copy"><h3>Ofertas <em>Exclusivas</em></h3><p>Reciba promociones y novedades directamente en su correo.</p></div>
+    <form class="nl-form" id="nlForm"><input type="email" placeholder="Su correo electrónico" required/><button type="submit">Suscribirse</button></form>
   </div>
 </section>
 
 <footer>
-  <div class="ft-wrap">
+  <div class="ft-inner">
     <div class="ft-grid">
-      <div class="ft-brand">
-        <p class="brand-h">ALCÁZAR DE LUNA</p>
-        <p class="brand-s" style="margin:4px 0 14px;color:rgba(255,255,255,.35);">HOTEL BOUTIQUE · CHILPANCINGO</p>
-        <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p>
-        <div class="ft-social">
-          <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-        </div>
-      </div>
-      <div class="ft-col">
-        <h4>Páginas</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="atracciones.html">Atracciones</a>
-        <a href="restaurante.html">Restaurante</a>
-        <a href="contacto.html">Contacto</a>
-      </div>
-      <div class="ft-col">
-        <h4>Habitaciones</h4>
-        <a href="contacto.html">Estándar con Balcón</a>
-        <a href="contacto.html">Estándar King</a>
-        <a href="contacto.html">Suite Premium</a>
-        <a href="contacto.html">Suite Luna</a>
-      </div>
-      <div class="ft-col">
-        <h4>Contáctenos</h4>
-        <a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a>
-        <a href="mailto:gerencia@hotelalcazardeluna.com" style="word-break:break-all;"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a>
-        <a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp Directo</a>
-      </div>
+      <div><p class="brand-h">ALCÁZAR DE LUNA</p><p class="brand-s" style="margin-top:4px;">HOTEL BOUTIQUE · CHILPANCINGO</p><p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p><div class="ft-social"><a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
+      <div class="ft-col"><h4>Páginas</h4><a href="index.html">Inicio</a><a href="nosotros.html">Nosotros</a><a href="atracciones.html">Atracciones</a><a href="restaurante.html">Restaurante</a><a href="contacto.html">Contacto</a></div>
+      <div class="ft-col"><h4>Habitaciones</h4><a href="contacto.html">Estándar con Balcón</a><a href="contacto.html">Estándar King</a><a href="contacto.html">Suite Premium</a><a href="contacto.html">Suite Luna</a></div>
+      <div class="ft-col"><h4>Contáctenos</h4><a href="tel:+527471056008"><i class="fa-solid fa-phone"></i> (52) 747 105 6008</a><a href="mailto:gerencia@hotelalcazardeluna.com"><i class="fa-solid fa-envelope"></i> gerencia@hotelalcazardeluna.com</a><a href="https://wa.me/527471056008" style="color:#25d366;font-weight:600;"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></div>
     </div>
-    <div class="ft-bottom">
-      <span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span>
-      <div class="ft-soc2">
-        <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-    </div>
+    <div class="ft-bottom"><span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span><div class="ft-soc2"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a></div></div>
   </div>
 </footer>
-
 <script src="index.js"></script>
 </body>
 </html>
