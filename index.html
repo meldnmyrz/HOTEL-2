@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hotel Alcázar de Luna | Boutique · Chilpancingo</title>
+  <title>Inicio — Hotel Alcázar de Luna</title>
   <meta name="description" content="Hotel boutique de lujo en Chilpancingo, Guerrero. Habitaciones exclusivas, Restaurante Naolí y experiencias únicas. Reserve directo al mejor precio."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
@@ -17,70 +16,68 @@
 <!-- HEADER -->
 <header id="header">
   <div class="hdr-inner">
-    <a href="#inicio" class="brand">
+    <a href="index.html" class="brand">
       <span class="brand-h">ALCÁZAR DE LUNA</span>
       <span class="brand-s">HOTEL BOUTIQUE · CHILPANCINGO</span>
     </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#inicio" class="nl active">Inicio</a>
-      <a href="#nosotros" class="nl">Nosotros</a>
-      <a href="#atracciones" class="nl">Atracciones</a>
-      <a href="#restaurante" class="nl">Restaurante</a>
-      <a href="#contacto" class="nl">Contacto</a>
+    <nav class="nav-links">
+      <a href="index.html"       class="nl active">Inicio</a>
+      <a href="nosotros.html"    class="nl">Nosotros</a>
+      <a href="atracciones.html" class="nl">Atracciones</a>
+      <a href="restaurante.html" class="nl">Restaurante</a>
+      <a href="contacto.html"    class="nl">Contacto</a>
     </nav>
     <div class="hdr-right">
       <a href="tel:+527471056008" class="hdr-phone"><i class="fa-solid fa-phone"></i> 747 105 6008</a>
-      <a href="#reservar" class="btn-gold-sm">Reservar</a>
+      <a href="contacto.html" class="btn-gold-sm">Reservar</a>
     </div>
     <button class="burger" id="burger"><span></span><span></span><span></span></button>
   </div>
   <div class="mob-nav" id="mobNav">
-    <a href="#inicio"      class="ml">Inicio</a>
-    <a href="#nosotros"    class="ml">Nosotros</a>
-    <a href="#atracciones" class="ml">Atracciones</a>
-    <a href="#restaurante" class="ml">Restaurante</a>
-    <a href="#contacto"    class="ml">Contacto</a>
-    <a href="#reservar"    class="btn-gold-sm mob-cta">Reservar Ahora</a>
+    <a href="index.html"       class="ml">Inicio</a>
+    <a href="nosotros.html"    class="ml">Nosotros</a>
+    <a href="atracciones.html" class="ml">Atracciones</a>
+    <a href="restaurante.html" class="ml">Restaurante</a>
+    <a href="contacto.html"    class="ml">Contacto</a>
+    <a href="contacto.html"    class="btn-gold-sm mob-cta">Reservar Ahora</a>
   </div>
 </header>
 
-<!-- ══ INICIO ══ -->
-<section id="inicio" class="hero">
+<!-- HERO -->
+<section class="hero">
   <div class="hero-wrap">
-    <!-- LEFT -->
     <div class="hero-left">
       <span class="hero-eye">THE ULTIMATE LUXURY EXPERIENCE</span>
       <h1>La Base<br/>Perfecta<br/><em>Para Ti</em></h1>
       <p class="hero-sub">Un santuario boutique de calidez humana y excelencia en el corazón de Chilpancingo, Guerrero.</p>
       <div class="hero-actions">
-        <a href="#nosotros"   class="btn-primary">Descubrir</a>
-        <a href="#atracciones" class="btn-text-link"><i class="fa-solid fa-play"></i> Explorar</a>
+        <a href="nosotros.html" class="btn-primary">Descubrir</a>
+        <a href="atracciones.html" class="btn-text-link"><i class="fa-solid fa-play"></i> Explorar</a>
       </div>
 
       <!-- BOOKING WIDGET -->
-      <div class="bw" id="reservar">
+      <form class="bw" id="bwForm">
         <div class="bw-f">
           <label><i class="fa-regular fa-calendar icon-g"></i> CHECK IN</label>
-          <input type="date" id="ci"/>
+          <input type="date" id="bwCI"/>
         </div>
         <div class="bw-div"></div>
         <div class="bw-f">
           <label><i class="fa-regular fa-calendar icon-g"></i> CHECK OUT</label>
-          <input type="date" id="co"/>
+          <input type="date" id="bwCO"/>
         </div>
         <div class="bw-div"></div>
         <div class="bw-f bw-sm">
           <label><i class="fa-solid fa-user icon-g"></i> HUÉSPEDES</label>
-          <select>
+          <select id="bwGuests">
             <option>01</option><option selected>02</option>
             <option>03</option><option>04</option>
           </select>
         </div>
-        <button class="bw-btn" id="bwBtn">Book Now</button>
-      </div>
+        <button type="submit" class="bw-btn">Book Now</button>
+      </form>
     </div>
 
-    <!-- RIGHT -->
     <div class="hero-right">
       <div class="h-img-main">
         <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=900&q=90&fit=crop" alt="Suite Alcázar de Luna"/>
@@ -90,7 +87,7 @@
         </div>
       </div>
       <div class="h-img-sm">
-        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=85&fit=crop" alt="Alberca Alcázar de Luna"/>
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=85&fit=crop" alt="Alberca"/>
       </div>
     </div>
   </div>
@@ -120,35 +117,8 @@
   </div>
 </section>
 
-<!-- ══ NOSOTROS ══ -->
-<section id="nosotros" class="nosotros">
-  <div class="nos-wrap">
-    <div class="nos-media">
-      <img class="nos-main" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=700&q=85&fit=crop" alt="Alberca"/>
-      <img class="nos-sm"   src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=500&q=85&fit=crop" alt="Habitación"/>
-      <div class="nos-stat">
-        <span class="nst-n">80<sup>+</sup></span>
-        <span class="nst-l">Personal de Élite</span>
-      </div>
-    </div>
-    <div class="nos-text">
-      <p class="eyebrow">QUIÉNES SOMOS</p>
-      <h2>Tu Comodidad,<br/>Nuestra <em>Prioridad</em></h2>
-      <div class="g-rule"></div>
-      <p>En el Hotel Alcázar de Luna concebimos cada estancia como una experiencia irrepetible. Desde nuestras habitaciones diseñadas con materiales premium hasta el servicio personalizado de nuestro equipo, todo está pensado para que su descanso sea absoluto.</p>
-      <p style="margin-top:14px;">Ubicados en la Carretera Cuernavaca-Chilpancingo, somos el punto de encuentro entre la modernidad y la calidez guerrerense, creando memorias que perduran más allá de cada visita.</p>
-      <div class="nos-nums">
-        <div class="nn"><span class="nn-n">17+</span><span class="nn-l">Años operando</span></div>
-        <div class="nn"><span class="nn-n">5★</span><span class="nn-l">Servicio premium</span></div>
-        <div class="nn"><span class="nn-n">98%</span><span class="nn-l">Satisfacción</span></div>
-      </div>
-      <a href="#reservar" class="btn-primary">Reservar Ahora</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ HABITACIONES GALLERY ══ -->
-<section id="habitaciones" class="rooms-gal">
+<!-- ROOMS PREVIEW -->
+<section class="rooms-gal">
   <div class="rg-head">
     <h2>HABITACIONES</h2>
     <div class="rg-tabs">
@@ -158,17 +128,17 @@
     </div>
   </div>
   <div class="rg-grid">
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85&fit=crop" alt="Estándar Balcón"/><div class="rgi-ov"><p>Estándar con Balcón</p><span>$120 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=700&q=85&fit=crop" alt="Estándar King"/><div class="rgi-ov"><p>Estándar King</p><span>$120 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=700&q=85&fit=crop" alt="Suite Premium"/><div class="rgi-ov"><p>Suite Premium</p><span>$160 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=700&q=85&fit=crop" alt="Suite Luna"/><div class="rgi-ov"><p>Suite Luna</p><span>$180 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&q=85&fit=crop" alt="Doble Estándar"/><div class="rgi-ov"><p>Doble Estándar</p><span>$110 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
-    <div class="rgi"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=700&q=85&fit=crop" alt="Suite Ejecutiva"/><div class="rgi-ov"><p>Suite Ejecutiva</p><span>$200 USD / noche</span><a href="#reservar" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85&fit=crop" alt="Estándar Balcón"/><div class="rgi-ov"><p>Estándar con Balcón</p><span>$120 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=700&q=85&fit=crop" alt="Estándar King"/><div class="rgi-ov"><p>Estándar King</p><span>$120 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1596436889106-be35e843f974?w=700&q=85&fit=crop" alt="Suite Premium"/><div class="rgi-ov"><p>Suite Premium</p><span>$160 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=700&q=85&fit=crop" alt="Suite Luna"/><div class="rgi-ov"><p>Suite Luna</p><span>$180 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&q=85&fit=crop" alt="Doble Estándar"/><div class="rgi-ov"><p>Doble Estándar</p><span>$110 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
+    <div class="rgi"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?w=700&q=85&fit=crop" alt="Suite Ejecutiva"/><div class="rgi-ov"><p>Suite Ejecutiva</p><span>$200 USD / noche</span><a href="contacto.html" class="btn-mini">Reservar</a></div></div>
   </div>
-  <div class="rg-footer"><a href="#reservar" class="btn-outline-gold">VER TODAS LAS HABITACIONES</a></div>
+  <div class="rg-footer"><a href="contacto.html" class="btn-outline-gold">RESERVAR HABITACIÓN</a></div>
 </section>
 
-<!-- ══ AWARDS ══ -->
+<!-- AWARDS -->
 <section class="awards">
   <p class="eyebrow text-c">RECONOCIMIENTOS</p>
   <h2 class="text-c">Solo Lo Mejor Para Ti</h2>
@@ -179,163 +149,41 @@
   </div>
 </section>
 
-<!-- ══ ATRACCIONES ══ -->
-<section id="atracciones" class="atracciones">
-  <div class="atr-wrap">
-    <div class="atr-hd">
-      <div>
-        <p class="eyebrow">EXPLORA CHILPANCINGO</p>
-        <h2>Descubre las<br/><em>Atracciones</em><br/>Cercanas</h2>
-      </div>
-      <p class="atr-intro">A minutos del hotel encontrarás lo mejor de Guerrero: cultura, naturaleza, gastronomía y aventura. Nuestro concierge organiza cada experiencia.</p>
-    </div>
-    <div class="atr-grid">
-      <div class="atr-card atr-big">
-        <img src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=900&q=85&fit=crop" alt="Grutas Cacahuamilpa"/>
-        <div class="atr-info">
-          <span class="atr-tag">Naturaleza</span>
-          <h3>Grutas de Cacahuamilpa</h3>
-          <p>Una de las cavernas más grandes del mundo, a menos de 1 hora del hotel.</p>
-        </div>
-      </div>
-      <div class="atr-card">
-        <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?w=600&q=85&fit=crop" alt="Centro Histórico"/>
-        <div class="atr-info">
-          <span class="atr-tag">Cultura</span>
-          <h3>Centro Histórico</h3>
-          <p>Arquitectura colonial, mercados artesanales y vida local auténtica.</p>
-        </div>
-      </div>
-      <div class="atr-card">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=85&fit=crop" alt="Gastronomía"/>
-        <div class="atr-info">
-          <span class="atr-tag">Gastronomía</span>
-          <h3>Sabores de Guerrero</h3>
-          <p>Pozole rojo, tlayudas y mole negro. Una experiencia culinaria única.</p>
-        </div>
-      </div>
-      <div class="atr-card">
-        <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&q=85&fit=crop" alt="Sierra"/>
-        <div class="atr-info">
-          <span class="atr-tag">Aventura</span>
-          <h3>Sierra Madre del Sur</h3>
-          <p>Rutas de senderismo con vistas espectaculares y aire puro de montaña.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ RESTAURANTE ══ -->
-<section id="restaurante" class="restaurante">
-  <div class="rst-wrap">
-    <div class="rst-media">
-      <img class="rst-main" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=90&fit=crop" alt="Platillo Naolí"/>
-      <div class="rst-row">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=85&fit=crop" alt="Interior Naolí"/>
-        <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&q=85&fit=crop" alt="Cócteles"/>
-      </div>
-    </div>
-    <div class="rst-text">
-      <p class="eyebrow">EXPERIENCIA GASTRONÓMICA</p>
-      <h2>Restaurante<br/><em>Naolí</em></h2>
-      <div class="g-rule"></div>
-      <p>En el corazón del Alcázar de Luna, <strong>Restaurante Naolí</strong> es donde los sabores del Pacífico mexicano se transforman en arte culinario. Frutos del mar frescos, recetas ancestrales de Guerrero y una cava seleccionada crean una sinfonía incomparable.</p>
-      <div class="rst-features">
-        <div class="rsf"><i class="fa-solid fa-fish icon-g"></i><span>Mariscos del Pacífico</span></div>
-        <div class="rsf"><i class="fa-solid fa-wine-glass icon-g"></i><span>Cava Seleccionada</span></div>
-        <div class="rsf"><i class="fa-solid fa-fire-burner icon-g"></i><span>Cocina de Autor</span></div>
-        <div class="rsf"><i class="fa-solid fa-clock icon-g"></i><span>7:00 – 22:00 hrs</span></div>
-      </div>
-      <div class="menu-prev">
-        <div class="mpi">
-          <div><b>Ceviche Guerrerense</b><span>Camarón, limón, chile, cilantro</span></div>
-          <b class="mpp">$185</b>
-        </div>
-        <div class="mpi">
-          <div><b>Filete al Mole Negro</b><span>Receta tradicional, arroz y frijoles</span></div>
-          <b class="mpp">$295</b>
-        </div>
-        <div class="mpi">
-          <div><b>Pozole Rojo de la Casa</b><span>Maíz cacahuazintle, chile ancestral</span></div>
-          <b class="mpp">$165</b>
-        </div>
-      </div>
-      <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn-primary">Ver Menú Completo</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══ TESTIMONIALS ══ -->
+<!-- TESTIMONIALS -->
 <section class="testimonials">
-  <p class="eyebrow text-c">TESTIMONIALS</p>
-  <h2 class="text-c">Client Feedback</h2>
+  <p class="eyebrow text-c">LO QUE DICEN</p>
+  <h2 class="text-c">Nuestros <em>Huéspedes</em></h2>
   <div class="tst-grid">
     <div class="tst-card">
       <div class="tst-q">"</div>
       <img src="https://i.pravatar.cc/80?img=47" alt="Joseline A." class="tst-av"/>
-      <h4>Joseline Alejandro</h4>
-      <p class="tst-loc">Ciudad de México</p>
+      <h4>Joseline Alejandro</h4><p class="tst-loc">Ciudad de México</p>
       <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">La comodidad de la cama king, la rapidez del check-in y la cena en Restaurante Naolí hicieron de nuestro aniversario algo verdaderamente extraordinario. Volveremos pronto.</p>
+      <p class="tst-txt">La cama king, el check-in exprés y la cena en Naolí hicieron de nuestro aniversario algo verdaderamente extraordinario. Volveremos pronto.</p>
     </div>
     <div class="tst-card">
       <div class="tst-q">"</div>
       <img src="https://i.pravatar.cc/80?img=32" alt="Clara D." class="tst-av"/>
-      <h4>Clara David</h4>
-      <p class="tst-loc">Acapulco, Guerrero</p>
+      <h4>Clara David</h4><p class="tst-loc">Acapulco, Guerrero</p>
       <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">El estacionamiento con elevador de autos es increíble. La habitación Premium con bañera es sencillamente hermosa. Sin duda es nuestro hotel de preferencia en la región.</p>
+      <p class="tst-txt">El estacionamiento con elevador de autos es increíble. La habitación Premium con bañera es sencillamente hermosa. Nuestro hotel de preferencia en la región.</p>
     </div>
     <div class="tst-card">
       <div class="tst-q">"</div>
       <img src="https://i.pravatar.cc/80?img=15" alt="Edward J." class="tst-av"/>
-      <h4>Edward James</h4>
-      <p class="tst-loc">Puebla, México</p>
+      <h4>Edward James</h4><p class="tst-loc">Puebla, México</p>
       <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-      <p class="tst-txt">Vine por negocios y el Salón de Eventos superó mis expectativas. El equipo es impecable y el Restaurante Naolí cerró la semana con el mejor mole que he probado en mi vida.</p>
+      <p class="tst-txt">Vine por negocios y el Salón de Eventos superó mis expectativas. El equipo es impecable y el mole de Naolí fue el mejor que he probado en mi vida.</p>
     </div>
   </div>
 </section>
 
-<!-- ══ CONTACTO ══ -->
-<section id="contacto" class="contacto">
-  <div class="cto-wrap">
-    <div class="cto-left">
-      <p class="eyebrow">UBICACIÓN Y CONTACTO</p>
-      <h2>Encuéntranos<br/><em>Aquí</em></h2>
-      <div class="g-rule"></div>
-      <div class="cto-items">
-        <div class="cti">
-          <div class="cti-ic"><i class="fa-solid fa-location-dot"></i></div>
-          <div><h4>Dirección</h4><p>Carr. Cuernavaca-Chilpancingo km 220+681.80,<br/>Col. Ixquiapa, Chilpancingo, Gro., 39016</p></div>
-        </div>
-        <div class="cti">
-          <div class="cti-ic"><i class="fa-solid fa-phone"></i></div>
-          <div><h4>Teléfono</h4><p><a href="tel:+527471056008">(52) 747 105 6008</a></p></div>
-        </div>
-        <div class="cti">
-          <div class="cti-ic"><i class="fa-solid fa-envelope"></i></div>
-          <div><h4>Email</h4><p><a href="mailto:gerencia@hotelalcazardeluna.com">gerencia@hotelalcazardeluna.com</a></p></div>
-        </div>
-      </div>
-      <form class="cto-form" id="ctoForm">
-        <div class="cf-2"><input type="text" placeholder="Nombre completo" required/><input type="email" placeholder="Correo electrónico" required/></div>
-        <input type="text" placeholder="Asunto"/>
-        <textarea rows="4" placeholder="Mensaje..."></textarea>
-        <button type="submit" class="btn-primary">Enviar Mensaje</button>
-      </form>
-    </div>
-    <div class="cto-map"><div id="map"></div></div>
-  </div>
-</section>
-
-<!-- ══ NEWSLETTER ══ -->
+<!-- NEWSLETTER -->
 <section class="newsletter">
   <div class="nl-wrap">
     <div>
       <p class="brand-h">ALCÁZAR DE LUNA</p>
-      <p class="brand-s" style="margin-top:4px;">HOTEL BOUTIQUE · CHILPANCINGO</p>
+      <p class="brand-s" style="margin-top:4px;color:rgba(255,255,255,.4);">HOTEL BOUTIQUE · CHILPANCINGO</p>
       <p class="nl-txt">Reciba ofertas exclusivas y novedades del hotel directamente en su correo.</p>
     </div>
     <form class="nl-form" id="nlForm">
@@ -345,13 +193,13 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
+<!-- FOOTER -->
 <footer>
   <div class="ft-wrap">
     <div class="ft-grid">
       <div class="ft-brand">
         <p class="brand-h">ALCÁZAR DE LUNA</p>
-        <p class="brand-s" style="margin:4px 0 14px;">HOTEL BOUTIQUE · CHILPANCINGO</p>
+        <p class="brand-s" style="margin:4px 0 14px;color:rgba(255,255,255,.35);">HOTEL BOUTIQUE · CHILPANCINGO</p>
         <p class="ft-tagline">Donde el confort moderno encuentra el descanso absoluto.</p>
         <div class="ft-social">
           <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
@@ -360,15 +208,19 @@
         </div>
       </div>
       <div class="ft-col">
-        <h4>Navegación</h4>
-        <a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a>
-        <a href="#atracciones">Atracciones</a><a href="#restaurante">Restaurante</a>
-        <a href="#contacto">Contacto</a>
+        <h4>Páginas</h4>
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="atracciones.html">Atracciones</a>
+        <a href="restaurante.html">Restaurante</a>
+        <a href="contacto.html">Contacto</a>
       </div>
       <div class="ft-col">
         <h4>Habitaciones</h4>
-        <a href="#reservar">Estándar con Balcón</a><a href="#reservar">Estándar King</a>
-        <a href="#reservar">Suite Premium</a><a href="#reservar">Suite Luna</a>
+        <a href="contacto.html">Estándar con Balcón</a>
+        <a href="contacto.html">Estándar King</a>
+        <a href="contacto.html">Suite Premium</a>
+        <a href="contacto.html">Suite Luna</a>
       </div>
       <div class="ft-col">
         <h4>Contáctenos</h4>
@@ -380,15 +232,14 @@
     <div class="ft-bottom">
       <span>© <span id="yr"></span> Hotel Alcázar de Luna · Todos los derechos reservados.</span>
       <div class="ft-soc2">
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/share/15QbD2xYaE/?mibextid=wwXIfr"><i class="fa-brands fa-facebook-f"></i></a>
         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://wa.me/527471056008"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://wa.me/527471056008"><i class="fa-brands fa-whatsapp"></i></a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
