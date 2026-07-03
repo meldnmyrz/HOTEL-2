@@ -1,205 +1,119 @@
 /* ============================================================
-   Hotel Alcázar de Luna — index.js
+   Hotel Alcázar de Luna — index.js v2
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. NAVBAR scroll effect ── */
-  const header = document.querySelector('.main-header');
+  /* ── 1. Navbar scroll ── */
+  const header = document.getElementById('header');
   window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
+    header?.classList.toggle('scrolled', window.scrollY > 60);
   }, { passive: true });
 
   /* ── 2. Active nav link on scroll ── */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const observer = new IntersectionObserver((entries) => {
+  const navLinks = document.querySelectorAll('.nl');
+  const sectObs = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[href="#${e.target.id}"]`);
+        const active = document.querySelector(`.nl[href="#${e.target.id}"]`);
         if (active) active.classList.add('active');
       }
     });
-  }, { threshold: 0.4 });
-  sections.forEach(s => observer.observe(s));
+  }, { threshold: 0.35 });
+  sections.forEach(s => sectObs.observe(s));
 
-  /* ── 3. Mobile drawer ── */
-  const mobileToggle  = document.getElementById('mobileToggle');
-  const mobileDrawer  = document.getElementById('mobileDrawer');
-  const closeDrawer   = document.getElementById('closeDrawer');
-  const drawerOverlay = document.getElementById('drawerOverlay');
+  /* ── 3. Mobile burger ── */
+  const burger = document.getElementById('burger');
+  const mobNav = document.getElementById('mobNav');
+  burger?.addEventListener('click', () => {
+    mobNav?.classList.toggle('open');
+  });
+  document.querySelectorAll('.ml').forEach(l => {
+    l.addEventListener('click', () => mobNav?.classList.remove('open'));
+  });
 
-  function openDrawer()  { mobileDrawer.classList.add('open'); drawerOverlay.classList.add('visible'); document.body.style.overflow = 'hidden'; }
-  function closeDrawerFn(){ mobileDrawer.classList.remove('open'); drawerOverlay.classList.remove('visible'); document.body.style.overflow = ''; }
-
-  mobileToggle?.addEventListener('click', openDrawer);
-  closeDrawer?.addEventListener('click', closeDrawerFn);
-  drawerOverlay?.addEventListener('click', closeDrawerFn);
-  document.querySelectorAll('.mob-link, .mob-book-btn').forEach(l => l.addEventListener('click', closeDrawerFn));
-
-  /* ── 4. Booking widget form ── */
-  const bookingForm = document.getElementById('bookingWidgetForm');
-  const checkinInput  = document.getElementById('checkin-date');
-  const checkoutInput = document.getElementById('checkout-date');
-
-  // Set min dates
+  /* ── 4. Booking widget ── */
+  const checkinEl  = document.getElementById('bw-checkin');
+  const checkoutEl = document.getElementById('bw-checkout');
   const today = new Date().toISOString().split('T')[0];
-  if (checkinInput)  checkinInput.min  = today;
-  if (checkoutInput) checkoutInput.min = today;
+  if (checkinEl)  checkinEl.min  = today;
+  if (checkoutEl) checkoutEl.min = today;
 
-  checkinInput?.addEventListener('change', () => {
-    if (checkoutInput) {
-      checkoutInput.min = checkinInput.value;
-      if (checkoutInput.value && checkoutInput.value <= checkinInput.value) {
-        const next = new Date(checkinInput.value);
-        next.setDate(next.getDate() + 1);
-        checkoutInput.value = next.toISOString().split('T')[0];
-      }
+  checkinEl?.addEventListener('change', () => {
+    if (!checkoutEl) return;
+    checkoutEl.min = checkinEl.value;
+    if (checkoutEl.value && checkoutEl.value <= checkinEl.value) {
+      const d = new Date(checkinEl.value);
+      d.setDate(d.getDate() + 1);
+      checkoutEl.value = d.toISOString().split('T')[0];
     }
   });
 
-  bookingForm?.addEventListener('submit', (e) => {
+  document.getElementById('bw-form')?.addEventListener('submit', (e) => {
     e.preventDefault();
-    const room = document.getElementById('room-select')?.value || 'king';
-    openBookingDrawer(room);
+    const checkin  = checkinEl?.value  || '';
+    const checkout = checkoutEl?.value || '';
+    const guests   = document.getElementById('bw-guests')?.value || '2';
+    if (!checkin || !checkout) { alert('Por favor selecciona fechas de entrada y salida.'); return; }
+    const msg = encodeURIComponent(
+      `Hola, deseo hacer una reserva en Hotel Alcázar de Luna.\n` +
+      `• Entrada: ${checkin}\n• Salida: ${checkout}\n• Huéspedes: ${guests}\nPor favor contáctenme para confirmar disponibilidad.`
+    );
+    window.open(`https://wa.me/527471056008?text=${msg}`, '_blank');
   });
 
-  /* ── 5. Room card "Reservar" buttons ── */
-  document.querySelectorAll('.btn-book-room').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openBookingDrawer(btn.dataset.room || 'king');
+  /* ── 5. Room tabs ── */
+  const tabs = document.querySelectorAll('.rgt');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
     });
   });
 
-  /* ── 6. Booking Drawer ── */
-  const bookingDrawer        = document.getElementById('bookingDrawer');
-  const bookingDrawerOverlay = document.getElementById('bookingDrawerOverlay');
-  const closeBookingDrawer   = document.getElementById('closeBookingDrawer');
-
-  const roomData = {
-    premium: { name: 'Habitación Premium con Bañera', price: 160 },
-    king:    { name: 'Estándar King',                 price: 120 },
-    balcony: { name: 'Estándar con Balcón',           price: 130 },
-  };
-
-  function openBookingDrawer(roomId) {
-    const room = roomData[roomId] || roomData.king;
-
-    // Sync form data into drawer summary
-    const checkin  = checkinInput?.value  || '';
-    const checkout = checkoutInput?.value || '';
-    const guests   = document.getElementById('guests-count')?.options[document.getElementById('guests-count')?.selectedIndex]?.text || '2 Adultos';
-
-    let nights = 1;
-    if (checkin && checkout) {
-      const diff = (new Date(checkout) - new Date(checkin)) / 86400000;
-      if (diff > 0) nights = diff;
-    }
-
-    document.getElementById('summary-room-name').textContent = room.name;
-    document.getElementById('summary-checkin').textContent   = checkin  || 'Seleccionar';
-    document.getElementById('summary-checkout').textContent  = checkout || 'Seleccionar';
-    document.getElementById('summary-guests').textContent    = guests;
-    document.getElementById('summary-nights').textContent    = nights;
-    document.getElementById('summary-price-night').textContent = `$${room.price}.00 USD`;
-    document.getElementById('summary-price-total').textContent = `$${room.price * nights}.00 USD`;
-
-    bookingDrawer?.classList.add('open');
-    bookingDrawerOverlay?.classList.add('visible');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeBookingDrawerFn() {
-    bookingDrawer?.classList.remove('open');
-    bookingDrawerOverlay?.classList.remove('visible');
-    document.body.style.overflow = '';
-  }
-
-  closeBookingDrawer?.addEventListener('click', closeBookingDrawerFn);
-  bookingDrawerOverlay?.addEventListener('click', closeBookingDrawerFn);
-
-  /* ── 7. Booking contact form submit ── */
-  const bookingContactForm = document.getElementById('bookingContactForm');
-  bookingContactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const roomName  = document.getElementById('summary-room-name')?.textContent;
-    const total     = document.getElementById('summary-price-total')?.textContent;
-    const guestName = document.getElementById('booking-name')?.value;
-    const email     = document.getElementById('booking-email')?.value;
-    const phone     = document.getElementById('booking-phone')?.value;
-
-    // Populate success modal
-    document.getElementById('success-total-price').textContent = total;
-    document.getElementById('success-room-name').textContent   = roomName;
-
-    // WhatsApp redirect — build pre-filled message
-    const checkin  = document.getElementById('summary-checkin')?.textContent;
-    const checkout = document.getElementById('summary-checkout')?.textContent;
-    const msg = encodeURIComponent(
-      `Hola, soy ${guestName}. Deseo confirmar mi reserva directa:\n` +
-      `• Habitación: ${roomName}\n• Entrada: ${checkin}\n• Salida: ${checkout}\n` +
-      `• Total estimado: ${total}\n• Email: ${email}\n• Tel: ${phone}`
-    );
-    document.getElementById('checkoutRealBtn').href = `https://wa.me/527471056008?text=${msg}`;
-
-    closeBookingDrawerFn();
-    const modal = document.getElementById('successBookingModal');
-    modal?.classList.add('visible');
-  });
-
-  // Close success modal
-  document.getElementById('closeSuccessModal')?.addEventListener('click', () => {
-    document.getElementById('successBookingModal')?.classList.remove('visible');
-  });
-
-  /* ── 8. Testimonials slider ── */
-  const slides   = document.querySelectorAll('.testimonial-slide');
-  let current    = 0;
-  let autoSlide;
-
-  function showSlide(idx) {
-    slides.forEach(s => s.classList.remove('active'));
-    current = (idx + slides.length) % slides.length;
-    slides[current]?.classList.add('active');
-  }
-
-  document.getElementById('sliderNextBtn')?.addEventListener('click', () => { showSlide(current + 1); resetAuto(); });
-  document.getElementById('sliderPrevBtn')?.addEventListener('click', () => { showSlide(current - 1); resetAuto(); });
-
-  function resetAuto() { clearInterval(autoSlide); autoSlide = setInterval(() => showSlide(current + 1), 6000); }
-  resetAuto();
-
-  /* ── 9. Leaflet Map ── */
-  const mapEl = document.getElementById('contactMap');
+  /* ── 6. Leaflet map ── */
+  const mapEl = document.getElementById('map');
   if (mapEl && typeof L !== 'undefined') {
     const lat = 17.5534, lng = -99.5009;
-    const map = L.map('contactMap', { zoomControl: true, scrollWheelZoom: false }).setView([lat, lng], 15);
-
+    const map = L.map('map', { zoomControl: true, scrollWheelZoom: false }).setView([lat, lng], 15);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '© <a href="https://carto.com/">CARTO</a>',
-      maxZoom: 19
+      attribution: '© <a href="https://carto.com/">CARTO</a>', maxZoom: 19
     }).addTo(map);
-
     const goldIcon = L.divIcon({
       className: '',
-      html: `<div style="
-        width:36px;height:36px;border-radius:50% 50% 50% 0;
-        background:#c9a55a;transform:rotate(-45deg);
-        border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3);">
-      </div>`,
+      html: `<div style="width:36px;height:36px;border-radius:50% 50% 50% 0;background:#c9a55a;transform:rotate(-45deg);border:3px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.3);"></div>`,
       iconSize: [36, 36], iconAnchor: [18, 36]
     });
-
     L.marker([lat, lng], { icon: goldIcon })
       .addTo(map)
-      .bindPopup('<strong>Hotel Alcázar de Luna</strong><br/>Chilpancingo, Guerrero')
+      .bindPopup('<strong>Hotel Alcázar de Luna</strong><br/>km 220+681.80, Chilpancingo, Gro.')
       .openPopup();
   }
 
-  /* ── 10. Fade-in on scroll ── */
-  const fadeEls = document.querySelectorAll('.room-card, .highlight-item, .amenity-card, .contact-detail-item');
+  /* ── 7. Contact form ── */
+  document.getElementById('cto-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name    = document.getElementById('cf-name')?.value || '';
+    const email   = document.getElementById('cf-email')?.value || '';
+    const subject = document.getElementById('cf-subject')?.value || '';
+    const msg     = document.getElementById('cf-msg')?.value || '';
+    const wa = encodeURIComponent(`Hola, mi nombre es ${name} (${email}).\nAsunto: ${subject}\n\n${msg}`);
+    window.open(`https://wa.me/527471056008?text=${wa}`, '_blank');
+    e.target.reset();
+  });
+
+  /* ── 8. Newsletter form ── */
+  document.getElementById('nl-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button');
+    if (btn) { btn.textContent = '¡Suscrito!'; btn.style.background = '#152338'; }
+    setTimeout(() => { e.target.reset(); if (btn) { btn.textContent = 'Suscribirse'; btn.style.background = ''; } }, 3000);
+  });
+
+  /* ── 9. Scroll fade-in ── */
+  const fadeEls = document.querySelectorAll('.tst-card, .atr-card, .rgi, .nos-nums .nn, .aw');
   const fadeObs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
@@ -211,13 +125,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, { threshold: 0.1 });
-
   fadeEls.forEach(el => {
-    el.style.cssText += 'opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease;';
+    el.style.cssText += 'opacity:0;transform:translateY(22px);transition:opacity .55s ease,transform .55s ease;';
     fadeObs.observe(el);
   });
 
-  /* ── 11. Year in footer ── */
+  /* ── 10. Year in footer ── */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
