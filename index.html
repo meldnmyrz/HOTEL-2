@@ -52,43 +52,43 @@
       <a href="contacto.html" class="btn-gold"><i class="fa-solid fa-calendar-check"></i> Reservar Ahora</a>
       <a href="nosotros.html" class="btn-ghost-w">Conocer Más</a>
     </div>
-
-    <!-- BARRA DE RESERVA -->
-    <div class="bbar-wrap">
-      <form class="bbar" id="bwForm">
-        <div class="bf" id="bfCI">
-          <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check In</div>
-          <div class="bf-val" id="bfCIVal">Seleccionar fecha</div>
-          <input type="date" id="bwCI"/>
-        </div>
-        <div class="bf" id="bfCO">
-          <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check Out</div>
-          <div class="bf-val" id="bfCOVal">Seleccionar fecha</div>
-          <input type="date" id="bwCO"/>
-        </div>
-        <div class="bf">
-          <div class="bf-label"><i class="fa-solid fa-moon"></i> Noches</div>
-          <div class="bf-val" id="bfNights">—</div>
-        </div>
-        <div class="bf" style="border-right:none">
-          <div class="bf-label"><i class="fa-solid fa-user-group"></i> Huéspedes</div>
-          <div class="bf-val">
-            <select id="bwGuests" style="appearance:auto;font-size:15px;font-weight:700;color:var(--text);background:none;border:none;outline:none;font-family:var(--sans);cursor:pointer;width:100%">
-              <option value="1">1 persona</option>
-              <option value="2" selected>2 personas</option>
-              <option value="3">3 personas</option>
-              <option value="4">4 personas</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="bbar-btn"><i class="fa-solid fa-magnifying-glass"></i> Buscar</button>
-      </form>
-    </div>
   </div>
 </section>
 
+<!-- BARRA DE RESERVA — fuera del hero para evitar overflow:hidden -->
+<div class="bbar-outer">
+  <form class="bbar" id="bwForm">
+    <div class="bf" id="bfCI">
+      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check In</div>
+      <div class="bf-val" id="bfCIVal">Seleccionar fecha</div>
+      <input type="date" id="bwCI"/>
+    </div>
+    <div class="bf" id="bfCO">
+      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check Out</div>
+      <div class="bf-val" id="bfCOVal">Seleccionar fecha</div>
+      <input type="date" id="bwCO"/>
+    </div>
+    <div class="bf">
+      <div class="bf-label"><i class="fa-solid fa-moon"></i> Noches</div>
+      <div class="bf-val" id="bfNights">—</div>
+    </div>
+    <div class="bf" style="border-right:none">
+      <div class="bf-label"><i class="fa-solid fa-user-group"></i> Huéspedes</div>
+      <div class="bf-val">
+        <select id="bwGuests" style="appearance:auto;font-size:15px;font-weight:700;color:var(--text);background:none;border:none;outline:none;font-family:var(--sans);cursor:pointer;width:100%">
+          <option value="1">1 persona</option>
+          <option value="2" selected>2 personas</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="bbar-btn"><i class="fa-brands fa-whatsapp"></i> Consultar</button>
+  </form>
+</div>
+
 <!-- ══ SERVICES STRIP ══ -->
-<div class="svc-strip" style="margin-top:52px">
+<div class="svc-strip">
   <div class="svc-item"><i class="fa-solid fa-car-on"></i> Elevador para autos</div>
   <div class="svc-item"><i class="fa-solid fa-water-ladder"></i> Alberca</div>
   <div class="svc-item"><i class="fa-solid fa-utensils"></i> Restaurante Naolí</div>

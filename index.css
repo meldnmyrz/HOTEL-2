@@ -71,8 +71,8 @@ p{font-size:14px;color:var(--gray);line-height:1.8}
 .hero-btns{display:flex;justify-content:center;gap:12px;margin-bottom:72px;flex-wrap:wrap}
 
 /* Booking bar */
-.bbar-wrap{position:relative;z-index:2;padding-bottom:0}
-.bbar{background:var(--white);border-radius:var(--r);box-shadow:var(--sh2);display:flex;align-items:stretch;max-width:860px;margin:0 auto;transform:translateY(50%)}
+.bbar-outer{position:relative;z-index:10;max-width:1280px;margin:-36px auto 0;padding:0 40px}
+.bbar{background:var(--white);border-radius:var(--r);box-shadow:var(--sh2);display:flex;align-items:stretch;width:100%}
 .bf{flex:1;min-width:0;padding:16px 20px;border-right:1px solid var(--border);cursor:pointer;transition:background .18s;position:relative}
 .bf:first-child{border-radius:var(--r) 0 0 var(--r)}
 .bf:hover{background:var(--off)}
@@ -85,7 +85,7 @@ p{font-size:14px;color:var(--gray);line-height:1.8}
 .bbar-btn i{font-size:14px}
 
 /* ═══════════ SERVICES STRIP ═══════════ */
-.svc-strip{background:var(--navy);display:flex;justify-content:center;flex-wrap:wrap;gap:0;padding:0 40px}
+.svc-strip{background:var(--navy);display:flex;justify-content:center;flex-wrap:wrap;gap:0;padding:0 40px;margin-top:56px}
 .svc-item{display:flex;align-items:center;gap:10px;padding:22px 32px;border-right:1px solid rgba(255,255,255,.07);font-size:12px;font-weight:600;letter-spacing:.3px;color:rgba(255,255,255,.6);text-transform:uppercase;transition:color .2s;cursor:default}
 .svc-item:last-child{border-right:none}
 .svc-item:hover{color:var(--gold)}
@@ -437,10 +437,12 @@ footer{background:#070e1a;padding:60px 40px 24px}
   .nav-links,.hdr-phone,.btn-hdr{display:none}
   .burger{display:flex}
   .hero h1{font-size:52px;letter-spacing:-2px}
-  .bbar{flex-direction:column;max-width:100%}
+  .bbar-outer{margin:-24px auto 0;padding:0 20px}
+  .bbar{flex-direction:column}
   .bf{border-right:none;border-bottom:1px solid var(--border)}
   .bf:first-child{border-radius:var(--r) var(--r) 0 0}
   .bbar-btn{border-radius:0 0 var(--r) var(--r);padding:18px;justify-content:center}
+  .svc-strip{margin-top:24px}
   .svc-strip{flex-wrap:wrap}
   .svc-item{border-right:none;flex:1 1 45%}
   .rooms-grid{grid-template-columns:1fr}
