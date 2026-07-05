@@ -79,8 +79,10 @@ p{font-size:14px;color:var(--gray);line-height:1.8}
 .bf-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gray);display:flex;align-items:center;gap:5px;margin-bottom:5px}
 .bf-label i{color:var(--gold);font-size:10px}
 .bf-val{font-size:15px;font-weight:700;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bf input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;border:none;font-size:1px}
-.bf-select{appearance:none;background:none;border:none;outline:none;font-family:var(--sans);font-size:15px;font-weight:700;color:var(--text);cursor:pointer;width:100%;padding:0}
+.bf input[type="date"]{position:static;opacity:1;cursor:pointer;width:100%;border:none;outline:none;background:none;font-family:var(--sans);font-size:15px;font-weight:700;color:var(--text);padding:0;margin-top:2px}
+.bf input[type="date"]::-webkit-calendar-picker-indicator{opacity:.5;cursor:pointer;filter:invert(0)}
+.bf-val{display:none}
+.bf-select{appearance:none;background:none;border:none;outline:none;font-family:var(--sans);font-size:15px;font-weight:700;color:var(--text);cursor:pointer;width:100%;padding:0;margin-top:2px}
 .bbar-btn{background:var(--gold);color:var(--navy);border:none;padding:0 32px;font-family:var(--sans);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:0 var(--r) var(--r) 0;display:flex;align-items:center;gap:10px;white-space:nowrap;transition:background .2s;flex-shrink:0}
 .bbar-btn:hover{background:var(--gold2)}
 .bbar-btn i{font-size:14px}
