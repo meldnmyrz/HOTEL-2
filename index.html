@@ -59,31 +59,45 @@
 <div class="bbar-outer">
   <form class="bbar" id="bwForm">
     <div class="bf" id="bfCI">
-      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check In</div>
+      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Llegada</div>
       <div class="bf-val" id="bfCIVal">Seleccionar fecha</div>
       <input type="date" id="bwCI"/>
     </div>
     <div class="bf" id="bfCO">
-      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Check Out</div>
+      <div class="bf-label"><i class="fa-regular fa-calendar"></i> Salida</div>
       <div class="bf-val" id="bfCOVal">Seleccionar fecha</div>
       <input type="date" id="bwCO"/>
     </div>
     <div class="bf">
-      <div class="bf-label"><i class="fa-solid fa-moon"></i> Noches</div>
-      <div class="bf-val" id="bfNights">—</div>
-    </div>
-    <div class="bf" style="border-right:none">
       <div class="bf-label"><i class="fa-solid fa-user-group"></i> Huéspedes</div>
       <div class="bf-val">
-        <select id="bwGuests" style="appearance:auto;font-size:15px;font-weight:700;color:var(--text);background:none;border:none;outline:none;font-family:var(--sans);cursor:pointer;width:100%">
-          <option value="1">1 persona</option>
-          <option value="2" selected>2 personas</option>
-          <option value="3">3 personas</option>
-          <option value="4">4 personas</option>
+        <select id="bwGuests" class="bf-select">
+          <option value="1">1 Huésped</option>
+          <option value="2" selected>2 Huéspedes</option>
+          <option value="3">3 Huéspedes</option>
+          <option value="4">4 Huéspedes</option>
+          <option value="5">5 Huéspedes</option>
+          <option value="6">6 Huéspedes</option>
+          <option value="7">7 Huéspedes</option>
+          <option value="8">8 Huéspedes</option>
+          <option value="9">9 Huéspedes</option>
+          <option value="10">10 Huéspedes</option>
         </select>
       </div>
     </div>
-    <button type="submit" class="bbar-btn"><i class="fa-brands fa-whatsapp"></i> Consultar</button>
+    <div class="bf" style="border-right:none">
+      <div class="bf-label"><i class="fa-solid fa-bed"></i> Habitación</div>
+      <div class="bf-val">
+        <select id="bwRoom" class="bf-select">
+          <option value="Habitación Premium con Bañera">Premium con Bañera</option>
+          <option value="Estándar King">Estándar King</option>
+          <option value="Habitación Estándar con Bañera">Estándar con Bañera</option>
+          <option value="Habitación Estándar con Balcón">Estándar con Balcón</option>
+          <option value="Habitación Estándar">Estándar</option>
+        </select>
+      </div>
+    </div>
+    <button type="submit" class="bbar-btn"><i class="fa-solid fa-calendar-check"></i> Reservar ahora</button>
   </form>
 </div>
 

@@ -55,12 +55,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('bwForm')?.addEventListener('submit', e => {
     e.preventDefault();
-    const ci = bwCI?.value || '';
-    const co = bwCO?.value || '';
-    const g  = document.getElementById('bwGuests')?.value || '2';
-    if (!ci || !co) { alert('Por favor selecciona fechas de entrada y salida.'); return; }
+    const ci   = bwCI?.value || '';
+    const co   = bwCO?.value || '';
+    const g    = document.getElementById('bwGuests')?.value || '2';
+    const room = document.getElementById('bwRoom')?.value || '';
+    if (!ci || !co) { alert('Por favor selecciona fechas de llegada y salida.'); return; }
+    const nights = bwCI?.value && bwCO?.value
+      ? Math.round((new Date(bwCO.value) - new Date(bwCI.value)) / 86400000)
+      : '';
     const msg = encodeURIComponent(
-      `Hola, deseo reservar en Hotel Alcázar de Luna.\n• Entrada: ${ci}\n• Salida: ${co}\n• Huéspedes: ${g}\n\nPor favor confirmen disponibilidad.`
+      `Hola, deseo hacer una reservación en Hotel Alcázar de Luna.\n\n` +
+      `• Habitación: ${room}\n` +
+      `• Llegada: ${ci}\n` +
+      `• Salida: ${co}\n` +
+      `• Noches: ${nights}\n` +
+      `• Huéspedes: ${g}\n\n` +
+      `Por favor confirmen disponibilidad y precio. ¡Gracias!`
     );
     window.open(`https://wa.me/527471056008?text=${msg}`, '_blank');
   });
