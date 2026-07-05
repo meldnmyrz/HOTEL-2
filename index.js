@@ -112,19 +112,33 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => { e.target.reset(); if (btn) { btn.textContent = 'Suscribirse'; btn.style.background = ''; }}, 3500);
   });
 
-  /* ── Scroll fade-in ── */
-  const els = document.querySelectorAll('.r-card, .tst-card, .atr-card, .val-card, .aw, .nn');
-  const obs = new IntersectionObserver(entries => {
+  /* ── Scroll reveal system (data-reveal) ── */
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseInt(entry.target.dataset.delay || 0);
+        setTimeout(() => entry.target.classList.add('is-revealed'), delay);
+        revealObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-reveal]').forEach(el => revealObs.observe(el));
+
+  /* ── Legacy fade-in for cards without data-reveal (inner pages) ── */
+  const legacyEls = document.querySelectorAll('.val-card, .nn');
+  const legacyObs = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
       if (e.isIntersecting) {
         setTimeout(() => { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; }, i*80);
-        obs.unobserve(e.target);
+        legacyObs.unobserve(e.target);
       }
     });
   }, { threshold: 0.1 });
-  els.forEach(el => {
-    el.style.cssText += 'opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease';
-    obs.observe(el);
+  legacyEls.forEach(el => {
+    if (!el.hasAttribute('data-reveal')) {
+      el.style.cssText += 'opacity:0;transform:translateY(20px);transition:opacity .5s ease,transform .5s ease';
+      legacyObs.observe(el);
+    }
   });
 
   /* ── Año footer ── */
