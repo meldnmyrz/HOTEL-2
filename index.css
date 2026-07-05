@@ -316,8 +316,106 @@ footer{background:#070e1a;padding:60px 40px 24px}
 .ft-soc2 a{color:rgba(255,255,255,.22);font-size:13px;transition:color .2s}
 .ft-soc2 a:hover{color:var(--gold)}
 
+/* ═══════════ RESTAURANTE NAOLÍ — EDITORIAL ═══════════ */
+
+/* Hero */
+.naoli-hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.naoli-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1900&q=90&fit=crop') center/cover no-repeat;transform:scale(1.04);transition:transform 6s ease}
+.naoli-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,14,26,.65) 0%,rgba(7,14,26,.45) 50%,rgba(7,14,26,.78) 100%)}
+.naoli-hero:hover .naoli-hero-bg{transform:scale(1)}
+.naoli-hero-body{position:relative;z-index:2;text-align:center;padding:0 24px;display:flex;flex-direction:column;align-items:center}
+.naoli-eyebrow{font-size:10px;font-weight:700;letter-spacing:6px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.naoli-h1{font-family:var(--serif);font-size:clamp(80px,13vw,180px);font-weight:400;font-style:italic;color:var(--white);line-height:.9;letter-spacing:-2px;margin-bottom:28px}
+.naoli-tagline{font-size:clamp(14px,1.6vw,18px);color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:44px;font-weight:300}
+.naoli-cta-link{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--white);border-bottom:1px solid rgba(255,255,255,.3);padding-bottom:4px;transition:color .2s,border-color .2s}
+.naoli-cta-link:hover{color:var(--gold);border-color:var(--gold)}
+.naoli-scroll-hint{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2}
+.naoli-scroll-hint span{display:block;width:1px;height:60px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.4));margin:0 auto;animation:scrollLine 2s ease-in-out infinite}
+@keyframes scrollLine{0%,100%{opacity:0;transform:scaleY(.5) translateY(-10px)}50%{opacity:1;transform:scaleY(1) translateY(0)}}
+
+/* Intro editorial */
+.naoli-intro{background:var(--white);padding:100px 40px;text-align:center}
+.naoli-intro-inner{max-width:760px;margin:0 auto}
+.naoli-label{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+.naoli-intro-h2{font-family:var(--serif);font-size:clamp(40px,5.5vw,72px);font-weight:400;color:var(--text);line-height:1.1;margin-bottom:24px}
+.naoli-intro-h2 em{font-style:italic;color:var(--gold)}
+.naoli-intro-p{font-size:16px;color:var(--gray);line-height:1.85;max-width:560px;margin:0 auto}
+.naoli-intro-p strong{color:var(--text);font-weight:600}
+.naoli-divider{width:1px;height:60px;background:var(--border);margin:40px auto}
+.naoli-features-row{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.naoli-feat{display:flex;flex-direction:column;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray)}
+.naoli-feat i{font-size:22px;color:var(--gold)}
+
+/* Split section */
+.naoli-split{display:grid;grid-template-columns:55% 45%;min-height:600px}
+.naoli-split-img{overflow:hidden}
+.naoli-split-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 6s ease}
+.naoli-split-img:hover img{transform:scale(1.04)}
+.naoli-split-text{background:var(--off);display:flex;flex-direction:column;justify-content:center;padding:80px 64px}
+.naoli-split-text h2{font-family:var(--serif);font-size:clamp(36px,4vw,60px);font-weight:400;color:var(--text);line-height:1.1;margin:12px 0 24px}
+.naoli-split-text h2 em{font-style:italic;color:var(--gold)}
+.naoli-split-text>p{font-size:15px;color:var(--gray);line-height:1.85;margin-bottom:40px}
+.naoli-occasions{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border)}
+.naoli-occ{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--border);color:var(--text);transition:color .2s}
+.naoli-occ:hover{color:var(--gold)}
+.naoli-occ:hover i{transform:translateX(4px)}
+.naoli-occ-n{font-size:11px;font-weight:700;color:var(--gold);font-family:var(--serif);font-style:italic;width:24px;flex-shrink:0}
+.naoli-occ-l{font-size:14px;font-weight:600;flex:1}
+.naoli-occ i{font-size:12px;color:var(--gray);transition:transform .2s}
+
+/* Full-bleed reveal */
+.naoli-reveal{position:relative;height:70vh;min-height:400px;overflow:hidden}
+.naoli-reveal img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.55)}
+.naoli-reveal-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px}
+.naoli-reveal-overlay blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.5vw,48px);color:var(--white);line-height:1.35;max-width:800px;border-left:none;opacity:.92}
+
+/* Menú editorial */
+.naoli-menu-sec{background:var(--white);padding:100px 40px}
+.naoli-menu-inner{max-width:1100px;margin:0 auto}
+.naoli-menu-header{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:60px;flex-wrap:wrap;padding-bottom:40px;border-bottom:1px solid var(--border)}
+.naoli-menu-header h2{font-family:var(--serif);font-size:clamp(38px,5vw,64px);font-weight:400;color:var(--text);line-height:1.05;margin-top:10px}
+.naoli-menu-header h2 em{font-style:italic;color:var(--gold)}
+.naoli-menu-note{font-size:13px;color:var(--gray);line-height:1.75;max-width:280px;text-align:right}
+.naoli-menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 80px}
+.naoli-category{padding:0}
+.naoli-cat-label{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gray);margin-bottom:28px;display:block}
+.naoli-dish{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--border)}
+.naoli-dish:last-child{border-bottom:none}
+.naoli-dish-info h4{font-size:16px;font-weight:700;color:var(--text);margin-bottom:5px}
+.naoli-dish-info p{font-size:13px;color:var(--gray);line-height:1.6;margin:0}
+.naoli-price{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--gold);flex-shrink:0;margin-top:2px}
+.naoli-menu-cta{display:flex;align-items:center;gap:28px;margin-top:60px;padding-top:40px;border-top:1px solid var(--border)}
+.naoli-res-link{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px;border-bottom:1.5px solid var(--navy);padding-bottom:2px;transition:color .2s,border-color .2s}
+.naoli-res-link:hover{color:var(--gold);border-color:var(--gold)}
+
+/* Galería */
+.naoli-gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:260px 260px;gap:6px}
+.naoli-gal-img{position:relative;overflow:hidden}
+.naoli-gal-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease;filter:brightness(.85)}
+.naoli-gal-img:hover img{transform:scale(1.06);filter:brightness(1)}
+.naoli-gal-tall{grid-row:span 2}
+.naoli-gal-label{position:absolute;bottom:16px;left:16px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.7);background:rgba(7,14,26,.45);backdrop-filter:blur(4px);padding:5px 12px;border-radius:100px;transition:color .2s}
+.naoli-gal-img:hover .naoli-gal-label{color:var(--white)}
+
+/* CTA reserva */
+.naoli-reserve{background:var(--navy);padding:100px 40px;text-align:center}
+.naoli-reserve-inner{max-width:700px;margin:0 auto}
+.naoli-reserve h2{font-family:var(--serif);font-size:clamp(36px,5vw,62px);font-weight:400;color:var(--white);line-height:1.1;margin:14px 0 20px}
+.naoli-reserve h2 em{font-style:italic;color:var(--gold)}
+.naoli-reserve>div>p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:40px}
+.naoli-reserve-btns{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
 /* ═══════════ RESPONSIVE ═══════════ */
 @media(max-width:1024px){
+  .naoli-split{grid-template-columns:1fr}
+  .naoli-split-img{height:420px}
+  .naoli-split-text{padding:60px 40px}
+  .naoli-menu-grid{grid-template-columns:1fr;gap:0}
+  .naoli-category:first-child{border-bottom:40px solid transparent}
+  .naoli-gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}
+  .naoli-gal-tall{grid-row:span 1}
+  .naoli-menu-header{flex-direction:column;align-items:flex-start}
+  .naoli-menu-note{text-align:left;max-width:100%}
   .rooms-grid{grid-template-columns:1fr 1fr}
   .whyus-wrap,.nos-grid,.rst-wrap,.cto-wrap{grid-template-columns:1fr}
   .nos-sm-img,.nos-stat-badge{display:none}
@@ -328,6 +426,11 @@ footer{background:#070e1a;padding:60px 40px 24px}
   .ft-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
+  .naoli-h1{font-size:72px}
+  .naoli-features-row{gap:24px}
+  .naoli-gallery{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}
+  .naoli-reserve-btns{flex-direction:column;align-items:center}
+  .naoli-split-text{padding:48px 24px}
   .nav-links,.hdr-phone,.btn-hdr{display:none}
   .burger{display:flex}
   .hero h1{font-size:52px;letter-spacing:-2px}
